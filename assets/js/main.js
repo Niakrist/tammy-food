@@ -1,16 +1,14 @@
-const appartHotelPatio = document.querySelector('[data-apart-otel="patio"]');
-const appartHotelStreet = document.querySelector('[data-apart-otel="street"]');
+const burger = document.querySelector('.burger');
+const menuHeaderList = document.querySelector('.menu-header__list');
+const body = document.querySelector('body')
 
-if (appartHotelPatio && appartHotelStreet) {
-  const apartHotelBlagoustrojstvo = document.querySelector('.project__img img');
-  appartHotelPatio.addEventListener('click', function(e) {
-    e.preventDefault();
-    apartHotelBlagoustrojstvo.src = './assets/images/apart-otel-blagoustrojstvo/apart-otel-blagoustrojstvo-patio.jpg'
-  })
+burger.addEventListener('click', function() {
+  burger.classList.toggle('active');
+  menuHeaderList.classList.toggle('show-menu');
+  body.classList.toggle('hid');
+})
+const form = document.querySelector('.form');
+const formText = document.querySelector('.form__text');
 
-  appartHotelStreet.addEventListener('click', function(e) {
-    e.preventDefault();
-    apartHotelBlagoustrojstvo.src = './assets/images/apart-otel-blagoustrojstvo/apart-otel-blagoustrojstvo-street.jpg'
-  })
-
-}
+formText.addEventListener('focus', () => form.classList.add('form-focus'));
+formText.addEventListener('blur', () => form.classList.remove('form-focus'));
