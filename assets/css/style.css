@@ -451,7 +451,7 @@ main {
 .hero__more {
     width: 40px;
     height: 40px;
-    background-color: hotpink;
+    background-color: #fff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -1205,9 +1205,9 @@ main {
 }
 
 .contacts-footer__line {
-    width: 2px;
+    width: 4px;
     height: 117px;
-    background-color: red;
+    background-color: #E6E6E6;
 }
 
 @media (max-width: 771.98px) {
