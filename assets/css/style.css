@@ -247,64 +247,71 @@ main {
 }
 
 .burger {
-    width: 35px;
-    height: 20px;
-    padding: 0;
-    margin: 0;
-    outline: none;
-    border: none;
-    background-color: transparent;
-    position: relative;
-    z-index: 100;
+    display: none;
 }
 
-.burger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: var(--alternative-text-color);
-    transform: scale(1);
-    transition: transform 0.2s ease;
-}
+@media (max-width: 767.98px) {
+    .burger {
+        display: block;
+        width: 35px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        position: relative;
+        z-index: 100;
+    }
 
-.burger::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: var(--alternative-text-color);
-    top: 0px;
-    left: 0;
-    transform: rotate(0);
-    transition: transform 0.2s ease, top 0.2s ease, background-color 0.2s ease;
-}
+    .burger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: var(--alternative-text-color);
+        transform: scale(1);
+        transition: transform 0.2s ease;
+    }
 
-.burger::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: var(--alternative-text-color);
-    bottom: 0px;
-    left: 0;
-    transform: rotate(0);
-    transition: transform 0.2s ease, bottom 0.2s ease, background-color 0.2s ease;
-}
+    .burger::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: var(--alternative-text-color);
+        top: 0px;
+        left: 0;
+        transform: rotate(0);
+        transition: transform 0.2s ease, top 0.2s ease, background-color 0.2s ease;
+    }
 
-.burger.active span {
-    transform: scale(0);
-}
+    .burger::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: var(--alternative-text-color);
+        bottom: 0px;
+        left: 0;
+        transform: rotate(0);
+        transition: transform 0.2s ease, bottom 0.2s ease, background-color 0.2s ease;
+    }
 
-.burger.active::before {
-    top: 9px;
-    transform: rotate(45deg);
-    background-color: var(--standart-text-color);
-}
+    .burger.active span {
+        transform: scale(0);
+    }
 
-.burger.active::after {
-    bottom: 9px;
-    transform: rotate(-45deg);
-    background-color: var(--standart-text-color);
+    .burger.active::before {
+        top: 9px;
+        transform: rotate(45deg);
+        background-color: var(--standart-text-color);
+    }
+
+    .burger.active::after {
+        bottom: 9px;
+        transform: rotate(-45deg);
+        background-color: var(--standart-text-color);
+    }
 }
 
 .hero {
@@ -843,6 +850,18 @@ main {
     margin-bottom: 50px;
 }
 
+@media (max-width: 830px) {
+    .delivery__content-block {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .delivery__content-block {
+        padding-top: 30px;
+    }
+}
+
 .delivery__button {
     display: inline-block;
     padding: 16px 18px;
@@ -884,6 +903,12 @@ main {
 
 .discount {
     padding: 115px 0 280px;
+}
+
+@media (max-width: 767.98px) {
+    .discount {
+        padding: 60px 0 140px;
+    }
 }
 
 .discount__wrapper {
@@ -940,14 +965,6 @@ main {
     line-height: 2;
 }
 
-.email,
-.phone {
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 1.34;
-    color: #232233;
-}
-
 .bg-color-soc-icon {
     fill: #fff;
     transition: fill 0.3s ease;
@@ -967,46 +984,8 @@ main {
 }
 
 .footer__contacts {
-    width: 100%;
-    display: flex;
-    gap: 94px;
-    left: auto;
-    right: auto;
-    margin: -370px 0 140px;
-    padding: 65px 90px;
-    background: #fff;
-    filter: drop-shadow(0px 10px 100px rgba(0, 0, 0, 0.24));
-    border-radius: 30px;
-}
-
-.footer__contacts-email {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    width: 50%;
-}
-
-.footer__contacts-line {
-    width: 4px;
-    height: 117px;
-    background-color: #E6E6E6;
-}
-
-.footer__contacts-phone {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    width: 50%;
-}
-
-.footer__contacts-img {
-    width: 100px;
-    height: 100px;
-    background-color: #FEB918;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: -330px;
+    background-color: #fff;
 }
 
 .footer__info-wrapper {
@@ -1178,4 +1157,106 @@ main {
     transform: translate(-50%, -50%);
     background-image: url("./../images/send.svg");
     background-repeat: no-repeat;
+}
+
+.contacts-footer {
+    padding: 57px 0px;
+    margin-bottom: 141px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    filter: drop-shadow(0px 10px 100px rgba(0, 0, 0, 0.24));
+    border-radius: 30px;
+    gap: 20px;
+}
+
+@media (max-width: 991.98px) {
+    .contacts-footer {
+        padding: 25px 0px;
+    }
+}
+
+@media (max-width: 771.98px) {
+    .contacts-footer {
+        flex-direction: column;
+        margin-bottom: 70px;
+    }
+}
+
+.contacts-footer__email, .contacts-footer__phone {
+    flex: 0 0 45%;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.contacts-footer__email a, .contacts-footer__phone a {
+    white-space: nowrap;
+}
+
+.contacts-footer__email {
+    padding-left: 5%;
+}
+
+@media (max-width: 771.98px) {
+    .contacts-footer__email {
+        padding-left: 0;
+    }
+}
+
+.contacts-footer__line {
+    width: 2px;
+    height: 117px;
+    background-color: red;
+}
+
+@media (max-width: 771.98px) {
+    .contacts-footer__line {
+        display: none;
+    }
+}
+
+.contacts-footer__mail-img, .contacts-footer__phone-img {
+    min-width: 100px;
+    min-height: 100px;
+    background-color: #FEB918;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 991.98px) {
+    .contacts-footer__mail-img, .contacts-footer__phone-img {
+        min-width: 60px;
+        min-height: 60px;
+    }
+
+    .contacts-footer__mail-img img, .contacts-footer__phone-img img {
+        width: 35px;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+}
+
+.email,
+.phone {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.34;
+    color: #232233;
+}
+
+@media (max-width: 991.98px) {
+    .email,
+  .phone {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 399px) {
+    .email,
+  .phone {
+        font-size: 16px;
+    }
 }
